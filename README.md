@@ -34,9 +34,9 @@ Git installed for version control
 
 installation steps:
 
-git clone https://github.com/Venkatareddykunduru/onlinepollingsystem.git
-cd onlinepollingsystem
-npm install
+-->git clone https://github.com/Venkatareddykunduru/onlinepollingsystem.git
+-->cd onlinepollingsystem
+-->npm install
 
 Environment Variables:
 Create a .env file in the backend directory and add the following environment variables:
