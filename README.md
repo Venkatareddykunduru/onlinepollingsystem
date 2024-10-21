@@ -34,8 +34,8 @@ Git installed for version control
 
 installation steps:
 
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Venkatareddykunduru/onlinepollingsystem.git
+cd onlinepollingsystem
 npm install
 
 Environment Variables:
