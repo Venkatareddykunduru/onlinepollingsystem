@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const socketio = require('socket.io');
 const path = require('path');
-const path = require('path');
 require('dotenv').config();
 
 // Import routes
@@ -174,8 +173,13 @@ app.use('/comments', commentRoutes);
 
 // Serve static files if needed (optional)
 //app.use(express.static(path.join(__dirname, 'public')));
-app.use((req,res)=>{
-    res.sendFile(path.join(__dirname,`public/${req.url}`));
+app.use((req, res) => {
+    const filePath = path.join(__dirname, 'public', req.path); // Use req.path to ignore query strings
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            res.status(err.status).send(err.message); // Handle error if the file is not found
+        }
+    });
 });
 // Start server after database connection
 (async () => {
