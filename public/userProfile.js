@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await axios.get('http://localhost:3000/auth/userinfo', {
+        const response = await axios.get('http://18.206.175.180:3000/auth/userinfo', {
             headers: {
                 'Authorization': `Bearer ${authToken}`
             }

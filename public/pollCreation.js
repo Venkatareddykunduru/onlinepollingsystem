@@ -8,7 +8,7 @@ async function createPoll(question, options) {
     //const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTRjNGI4ZWYzYzNmODE1ZjJkY2YwZSIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTcyOTQzMzk1NSwiZXhwIjoxNzI5NDUxOTU1fQ.rqNQrGQD02nuh-Bfh0vchRxL-apY995HrhM1xw8pJRU'; // Replace with actual token
     const token=localStorage.getItem('token');
     try {
-        const response = await axios.post('http://localhost:3000/poll/create', {
+        const response = await axios.post('http://18.206.175.180:3000/poll/create', {
             question: question,
             options: options
         }, {

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Token and Socket initialization for both Poll and Comments
     const token = localStorage.getItem('token');
-    const socket = io('http://localhost:3000', { auth: { token } });
+    const socket = io('http://18.206.175.180:3000', { auth: { token } });
 
     const pollId = getPollId();
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchPollResults(pollId) {
         try {
-            const response = await axios.get(`http://localhost:3000/poll/${pollId}`, {
+            const response = await axios.get(`http://18.206.175.180:3000/poll/${pollId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch comments for the current poll
     async function fetchComments(pollId) {
         try {
-            const response = await axios.get(`http://localhost:3000/comments/allcomments/${pollId}`, {
+            const response = await axios.get(`http://18.206.175.180:3000/comments/allcomments/${pollId}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             commentsData = response.data;

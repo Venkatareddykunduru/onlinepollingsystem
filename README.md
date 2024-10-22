@@ -42,40 +42,40 @@ Environment Variables:
 Create a .env file in the backend directory and add the following environment variables:
 
 PORT=3000
-MONGODB_URI=mongodb://localhost:27017/polling-system
+MONGODB_URI=mongodb://18.206.175.180:27017/polling-system
 JWT_SECRET=your_jwt_secret_key
 
 API Endpoints:
 
 Auth
 Register a New User
-URL: http://localhost:3000/auth/register
+URL: http://18.206.175.180:3000/auth/register
 Method: POST
 
 User Login
-URL: http://localhost:3000/auth/login
+URL: http://18.206.175.180:3000/auth/login
 Method: POST
 
 Get User Information
-URL: http://localhost:3000/auth/userinfo
+URL: http://18.206.175.180:3000/auth/userinfo
 Method: GET
 
 Polls
 
 Create a Poll
-URL: http://localhost:3000/poll/create
+URL: http://18.206.175.180:3000/poll/create
 Method: POST
 
 Get All Polls
-URL: http://localhost:3000/poll/getallpolls
+URL: http://18.206.175.180:3000/poll/getallpolls
 Method: GET
 
 Get Poll by ID
-URL: http://localhost:3000/poll/6714b36a1a460432904de2b8
+URL: http://18.206.175.180:3000/poll/6714b36a1a460432904de2b8
 Method: GET
 
 Get All Comments for a Poll
-URL: http://localhost:3000/comments/allcomments/67153cf46106d8f2efd70eba
+URL: http://18.206.175.180:3000/comments/allcomments/67153cf46106d8f2efd70eba
 Method: GET
 
 Real-time Features

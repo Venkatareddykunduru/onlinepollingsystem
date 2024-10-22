@@ -2,7 +2,7 @@
 //const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTRjNGI4ZWYzYzNmODE1ZjJkY2YwZSIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTcyOTQzMzk1NSwiZXhwIjoxNzI5NDUxOTU1fQ.rqNQrGQD02nuh-Bfh0vchRxL-apY995HrhM1xw8pJRU'; // Replace with actual token
 const token=localStorage.getItem('token');
 console.log("this is token", token);
-const socket = io('http://localhost:3000', {
+const socket = io('http://18.206.175.180:3000', {
     auth: {
         token: token
     }
@@ -15,9 +15,9 @@ socket.on('connect', () => {
 // Function to fetch all polls
 async function fetchPolls() {
     try {
-        //const response = await axios.get('http://localhost:3000/poll/getallpolls');
+        //const response = await axios.get('http://18.206.175.180:3000/poll/getallpolls');
 
-        const response = await axios.get('http://localhost:3000/poll/getallpolls', {
+        const response = await axios.get('http://18.206.175.180:3000/poll/getallpolls', {
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
