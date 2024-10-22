@@ -171,10 +171,16 @@ app.use('/poll', pollRoutes);
 app.use('/votes', voteRoutes);
 app.use('/comments', commentRoutes);
 
-// Serve static files if needed (optional)
-//app.use(express.static(path.join(__dirname, 'public')));
+// 
 app.use((req, res) => {
-    const filePath = path.join(__dirname, 'public', req.path); // Use req.path to ignore query strings
+    let filePath;
+    if (req.path === '/') {
+        // Redirect to the login page
+        filePath=path.join(__dirname,'public','/login.html');
+    } else {
+        // Serve the requested file from the public directory
+        filePath = path.join(__dirname, 'public', req.path); // Use req.path to ignore query strings
+    }
     res.sendFile(filePath, (err) => {
         if (err) {
             res.status(err.status).send(err.message); // Handle error if the file is not found
